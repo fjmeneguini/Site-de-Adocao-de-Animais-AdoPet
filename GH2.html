@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Fale Conosco | AdoPet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <!-- Depois, seus scripts do projeto -->
+  <script defer src="auth.js"></script>
+  <script defer src="consultas.js"></script>
+  <script defer src="faleconosco.js"></script>
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação principal -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Entrar</a>
+      <a href="faleconosco.html">Fale Conosco</a>
+    </nav>
+    <h1>Fale Conosco</h1>
+  </header>
+  <main>
+    <!-- Seção do formulário de contato para o usuário enviar dúvidas ou mensagens -->
+    <section style="max-width:500px;margin:2em auto;background:#fff8fc;padding:2em 2em 1em 2em;border-radius:16px;box-shadow:0 4px 24px #e1bee7;">
+      <form id="fale-form" style="display:flex;flex-direction:column;gap:1em;">
+        <!-- Campo para o nome do usuário -->
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <!-- Campo para o e-mail do usuário -->
+        <input type="email" id="email" placeholder="Seu email" required>
+        <!-- Campo opcional para informar o animal de interesse -->
+        <input type="text" id="animal-interesse" placeholder="Animal de interesse (opcional)">
+        <!-- Campo para a mensagem do usuário -->
+        <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar</button>
+      </form>
+      <!-- Mensagem de sucesso será exibida aqui após o envio -->
+      <div id="msg-sucesso"></div>
+    </section>
+  </main>
+  <!-- Rodapé do site com link para voltar e direitos autorais -->
+  <footer>
+    <a href="index.html">Voltar</a>
+    <p style="margin-top:1em;">&copy; 2025 AdoPet</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | AdoPet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <!-- Depois, seus scripts do projeto -->
+  <script defer src="auth.js"></script>
+  <script defer src="consultas.js"></script>
+  <script defer src="faleconosco.js"></script>
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação principal -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Entrar</a>
+      <a href="faleconosco.html">Fale Conosco</a>
+    </nav>
+    <h1>AdoPet</h1>
+  </header>
+  <main>
+    <!-- Seção centralizada para login e cadastro -->
+    <section style="max-width:400px;margin:2em auto;background:#fff8fc;padding:2em 2em 1em 2em;border-radius:16px;box-shadow:0 4px 24px #e1bee7;">
+      <!-- Formulário de login de usuário existente -->
+      <h2 style="text-align:center;color:#512da8;">Entrar</h2>
+      <form id="login-form" style="display:flex;flex-direction:column;gap:1em;">
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <hr style="margin:2em 0;">
+      <!-- Formulário de cadastro de novo usuário -->
+      <h2 style="text-align:center;color:#512da8;">Cadastrar</h2>
+      <form id="cadastro-form" style="display:flex;flex-direction:column;gap:1em;">
+        <input type="email" id="cadastro-email" placeholder="E-mail" required>
+        <input type="password" id="cadastro-senha" placeholder="Senha" required>
+        <select id="tipo-usuario" required>
+          <option value="">Tipo de Usuário</option>
+          <option value="user">Usuário</option>
+          <option value="admin">ONG/Admin</option>
+        </select>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+  <!-- Rodapé do site com link para voltar e direitos autorais -->
+  <footer>
+    <a href="index.html">Voltar</a>
+    <p style="margin-top:1em;">&copy; 2025 AdoPet</p>
+  </footer>
+</body>
+</html>

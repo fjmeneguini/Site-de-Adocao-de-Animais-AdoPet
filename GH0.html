@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>AdoPet - Encontre seu novo amigo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <!-- Depois, seus scripts do projeto -->
+  <script defer src="auth.js"></script>
+  <script defer src="consultas.js"></script>
+  <script defer src="faleconosco.js"></script>
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação principal -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Entrar</a>
+      <a href="faleconosco.html">Fale Conosco</a>
+    </nav>
+    <h1>AdoPet</h1>
+  </header>
+
+  <main>
+    <!-- Seção de filtros para busca de animais -->
+    <section id="filtros">
+      <form id="form-filtros" class="filtro-animais">
+        <!-- Filtros por espécie, porte e idade -->
+        <select name="especie" id="especie">
+          <option value="">Espécie</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+        </select>
+        <select name="porte" id="porte">
+          <option value="">Porte</option>
+          <option value="pequeno">Pequeno</option>
+          <option value="médio">Médio</option>
+          <option value="grande">Grande</option>
+        </select>
+        <select name="idade" id="idade">
+          <option value="">Idade</option>
+          <option value="filhote">Filhote</option>
+          <option value="adulto">Adulto</option>
+          <option value="idoso">Idoso</option>
+        </select>
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <!-- Seção onde serão exibidos os cards dos animais disponíveis para adoção -->
+    <section id="resultados">
+      <!-- Exemplo de card de animal (comentado) -->
+      <!--
+      <div class="animal-card">
+        <img src="img/exemplo.jpg" alt="Nome do animal">
+        <h3>Nome do Animal</h3>
+        <p>Descrição breve do animal.</p>
+        <button>Quero Adotar</button>
+      </div>
+      -->
+    </section>
+
+    <!-- Seção com o mapa das ONGs ou locais de adoção -->
+    <section id="mapa-ongs">
+      <h2>Onde Adotar</h2>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1eNYourMapIdAqui"
+        width="100%" height="300" style="border-radius:16px; box-shadow:0 2px 8px #e1bee7;"></iframe>
+    </section>
+
+    <!-- Seção de histórias de adoções felizes -->
+    <section id="historias">
+      <h2>Histórias de Adoções Felizes</h2>
+      <div id="historias-lista">
+        <!-- Conteúdo futuro -->
+        <!-- Aqui serão exibidas histórias reais de adoções bem-sucedidas, enviadas por usuários ou ONGs -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer>
+    <p>&copy; 2025 AdoPet</p>
+  </footer>
+</body>
+</html>
