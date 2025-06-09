@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin | AdoPet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <!-- Depois, seus scripts do projeto -->
+  <script defer src="auth.js"></script>
+  <script defer src="consultas.js"></script>
+  <script defer src="faleconosco.js"></script>
+</head>
+<body>
+  <!-- Cabeçalho do site com navegação para administradores/ONGs -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Painel</a>
+      <a href="faleconosco.html">Fale Conosco</a>
+    </nav>
+    <h1>Painel da ONG/Admin</h1>
+  </header>
+  <main>
+    <!-- Seção de cadastro de novos animais para adoção -->
+    <section style="max-width:500px;margin:2em auto;background:#fff8fc;padding:2em 2em 1em 2em;border-radius:16px;box-shadow:0 4px 24px #e1bee7;">
+      <h2 style="text-align:center;color:#512da8;">Cadastrar Animal</h2>
+      <form id="cadastro-animal" style="display:flex;flex-direction:column;gap:1em;">
+        <!-- Campo para nome do animal -->
+        <input type="text" id="nome-animal" placeholder="Nome" required>
+        <!-- Seleção da espécie do animal -->
+        <select id="especie-animal" required>
+          <option value="">Espécie</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+        </select>
+        <!-- Seleção do porte do animal -->
+        <select id="porte-animal" required>
+          <option value="">Porte</option>
+          <option value="pequeno">Pequeno</option>
+          <option value="médio">Médio</option>
+          <option value="grande">Grande</option>
+        </select>
+        <!-- Seleção da idade do animal -->
+        <select id="idade-animal" required>
+          <option value="">Idade</option>
+          <option value="filhote">Filhote</option>
+          <option value="adulto">Adulto</option>
+          <option value="idoso">Idoso</option>
+        </select>
+        <!-- Upload de foto do animal -->
+        <input type="file" id="foto-animal" accept="image/*" required>
+        <!-- Botão para cadastrar o animal -->
+        <button type="submit">Cadastrar Animal</button>
+      </form>
+    </section>
+    <!-- Seção onde serão exibidos os animais já cadastrados pela ONG/Admin -->
+    <section id="animais-cadastrados" style="max-width:900px;margin:2em auto;">
+      <!-- Aqui será exibida a lista dos animais cadastrados para adoção -->
+    </section>
+  </main>
+  <!-- Rodapé com opção de sair do painel -->
+  <footer>
+    <a href="index.html">Sair</a>
+  </footer>
+</body>
+</html>

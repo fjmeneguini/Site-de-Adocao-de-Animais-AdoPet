@@ -1,0 +1,213 @@
+/* --- Estilo global do corpo da página --- */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: linear-gradient(120deg, #f8bbd0 0%, #ce93d8 100%);
+  min-height: 100vh;
+}
+
+/* --- Cabeçalho e rodapé com gradiente e sombra --- */
+header, footer {
+  background: linear-gradient(90deg, #f8bbd0 60%, #ce93d8 100%);
+  color: #512da8;
+  padding: 2em 1em 1em 1em;
+  text-align: center;
+  box-shadow: 0 4px 24px #e1bee7;
+  letter-spacing: 1px;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 2em;
+}
+
+/* --- Títulos do cabeçalho e rodapé --- */
+header h1, footer h1, header h2, footer h2 {
+  margin: 0.2em 0;
+  font-weight: 700;
+}
+
+/* --- Estilo do título principal com ícone --- */
+header h1 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+header h1::before {
+  content: "🐾";
+  font-size: 1.2em;
+}
+
+/* --- Navegação principal --- */
+nav {
+  margin: 1.5em 0 0.5em 0;
+}
+nav a {
+  margin: 0 0.7em;
+  color: #fff;
+  background: linear-gradient(90deg, #512da8 60%, #9575cd 100%);
+  padding: 0.7em 1.7em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 12px #b39ddb;
+  border: 2px solid #fff;
+}
+nav a:hover {
+  background: linear-gradient(90deg, #ce93d8 60%, #f8bbd0 100%);
+  color: #512da8;
+  border: 2px solid #512da8;
+}
+
+/* --- Área principal do site --- */
+main {
+  padding: 2em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  background: #fff8fc;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px #e1bee7;
+  margin: 0 auto 2em auto;
+  max-width: 1200px;
+}
+
+/* --- Card de animal para adoção --- */
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  background: #fff;
+  margin: 1em;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #d1c4e9;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  position: relative;
+}
+.animal-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px #b39ddb;
+}
+.animal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  background: #f8bbd0;
+}
+.animal-card h3 {
+  margin: 1em 0 0.5em 0;
+  color: #512da8;
+  font-size: 1.3em;
+}
+.animal-card p {
+  margin: 0.5em 1em 1em 1em;
+  color: #616161;
+  font-size: 1em;
+}
+.animal-card button, .animal-card .btn {
+  margin: 1em 0 1.5em 0;
+  padding: 0.7em 2em;
+  background: linear-gradient(90deg, #f8bbd0, #ce93d8);
+  color: #512da8;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e1bee7;
+  transition: background 0.2s, color 0.2s;
+}
+.animal-card button:hover, .animal-card .btn:hover {
+  background: #9575cd;
+  color: #fffde7;
+}
+
+/* --- Filtros de busca de animais --- */
+.filtro-animais {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 2em 0;
+  padding: 1em 0;
+  background: #f8bbd0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #e1bee7;
+}
+.filtro-animais select, .filtro-animais button {
+  padding: 0.6em 1.2em;
+  border-radius: 12px;
+  border: none;
+  font-size: 1em;
+  margin: 0 0.2em;
+}
+.filtro-animais button {
+  background: linear-gradient(90deg, #ce93d8, #f8bbd0);
+  color: #512da8;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filtro-animais button:hover {
+  background: #9575cd;
+  color: #fff;
+}
+
+/* --- Títulos das seções --- */
+h2, h3 {
+  color: #512da8;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* --- Rodapé estilizado --- */
+footer {
+  margin-top: 2em;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(90deg, #ce93d8 60%, #f8bbd0 100%);
+  color: #512da8;
+  box-shadow: 0 -2px 12px #e1bee7;
+  font-size: 1.1em;
+}
+
+/* --- Responsividade para telas médias --- */
+@media (max-width: 900px) {
+  main {
+    gap: 1em;
+  }
+  .animal-card {
+    width: 90vw;
+    max-width: 340px;
+  }
+}
+
+/* --- Responsividade para telas pequenas (mobile) --- */
+@media (max-width: 600px) {
+  header, footer {
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+  nav a {
+    margin: 0 0.5em;
+    padding: 0.5em 0.8em;
+    font-size: 1em;
+  }
+  main {
+    padding: 0.5em;
+    gap: 0.5em;
+  }
+  .animal-card {
+    width: 98vw;
+    margin: 0.5em 0;
+    border-radius: 10px;
+  }
+  .animal-card img {
+    height: 140px;
+    border-radius: 10px 10px 0 0;
+  }
+}
